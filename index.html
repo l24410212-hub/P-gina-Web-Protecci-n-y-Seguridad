@@ -1,0 +1,710 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protección y seguridad</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f7fb;
+            color: #243b53;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(120deg, #102a43, #176b87);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin: 0;
+        }
+
+        header p {
+            color: #dff4f7;
+        }
+
+        nav {
+            background-color: white;
+            padding: 20px;
+            margin: 25px auto;
+            width: 90%;
+            border-radius: 12px;
+        }
+
+        nav a {
+            color: #176b87;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 8px;
+            display: inline-block;
+        }
+
+        section {
+            background-color: white;
+            width: 90%;
+            margin: 25px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #102a43;
+            border-left: 5px solid #176b87;
+            padding-left: 12px;
+        }
+
+        h3 {
+            color: #176b87;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        ul, ol {
+            padding-left: 25px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th {
+            background-color: #176b87;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #d9e2ec;
+            padding: 12px;
+            text-align: left;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eef6fa;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tarjeta {
+            background-color: #e6f4f7;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .tarjeta span {
+            font-size: 30px;
+        }
+
+        .destacado {
+            background-color: #eef8fb;
+            border-left: 5px solid #176b87;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .datos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .campo {
+            background-color: #f2f7fb;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .linea {
+            border-bottom: 1px dashed #627d98;
+            height: 30px;
+        }
+
+        footer {
+            background-color: #102a43;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            nav a {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🛡️ Protección y seguridad</h1>
+    <p>Unidad 6 - Sistemas Operativos</p>
+</header>
+
+<nav>
+    <h3>Índice de contenido</h3>
+    <a href="#tema61">6.1 Conceptos</a>
+    <a href="#tema62">6.2 Clasificación</a>
+    <a href="#tema63">6.3 Funciones</a>
+    <a href="#tema64">6.4 Matrices</a>
+    <a href="#tema65">6.5 Protección basada en lenguaje</a>
+    <a href="#tema66">6.6 Amenazas</a>
+    <a href="#tema67">6.7 Cifrado</a>
+    <a href="#datos">Datos</a>
+</nav>
+
+<section id="tema61">
+    <h2>6.1 Conceptos y objetivos de protección y seguridad</h2>
+
+    <p>
+        La protección es un mecanismo de control de acceso de los
+        programas, procesos o usuarios al sistema o a sus recursos.
+        Su objetivo es evitar el uso no autorizado de los recursos.
+    </p>
+
+    <p>
+        Una de las razones más importantes para proporcionar protección
+        es prevenir las violaciones intencionales de acceso por parte
+        de los usuarios.
+    </p>
+
+    <div class="destacado">
+        <strong>Objetivo principal:</strong>
+        Permitir que cada usuario o proceso acceda únicamente
+        a los recursos para los que tiene autorización.
+    </div>
+
+    <div class="contenedor">
+        <div class="tarjeta">
+            <span>📁</span>
+            <h3>Archivos</h3>
+            <p>Control de lectura y escritura.</p>
+        </div>
+
+        <div class="tarjeta">
+            <span>🧠</span>
+            <h3>Memoria</h3>
+            <p>Protección de espacios de memoria.</p>
+        </div>
+
+        <div class="tarjeta">
+            <span>👤</span>
+            <h3>Usuarios</h3>
+            <p>Control de permisos.</p>
+        </div>
+    </div>
+</section>
+
+<section id="tema62">
+    <h2>6.2 Clasificación aplicada a la seguridad</h2>
+
+    <h3>Seguridad interna</h3>
+    <p>
+        Está relacionada con los controles incorporados al hardware
+        y al sistema operativo para asegurar los recursos del sistema.
+    </p>
+
+    <h3>Seguridad externa</h3>
+    <p>
+        Consiste en la seguridad física y la seguridad operacional.
+    </p>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Ejemplos</th>
+        </tr>
+
+        <tr>
+            <td>Seguridad física</td>
+            <td>Protege instalaciones y equipos.</td>
+            <td>Detectores de humo, sensores de calor y cámaras.</td>
+        </tr>
+
+        <tr>
+            <td>Seguridad operacional</td>
+            <td>Establece políticas y procedimientos.</td>
+            <td>Autorizaciones, clasificación y auditorías.</td>
+        </tr>
+    </table>
+
+    <h3>Medidas de seguridad física</h3>
+    <ul>
+        <li>Protección contra incendios e inundaciones.</li>
+        <li>Protección contra intrusos.</li>
+        <li>Tarjetas de identificación.</li>
+        <li>Sistemas de huellas digitales.</li>
+        <li>Identificación por medio de la voz.</li>
+    </ul>
+
+    <h3>Seguridad operacional</h3>
+    <ul>
+        <li>Autorización de usuarios.</li>
+        <li>Clasificación de datos.</li>
+        <li>División de responsabilidades.</li>
+        <li>Verificaciones y controles de seguridad.</li>
+    </ul>
+</section>
+
+<section id="tema63">
+    <h2>6.3 Funciones del sistema de protección</h2>
+
+    <p>
+        El control de acceso determina quién puede utilizar los recursos
+        de un sistema operativo y qué operaciones puede realizar.
+    </p>
+
+    <h3>Ejemplos de mecanismos</h3>
+
+    <ul>
+        <li>
+            <strong>Direccionamiento de memoria:</strong>
+            permite que los procesos trabajen dentro de sus propios
+            espacios de dirección.
+        </li>
+
+        <li>
+            <strong>Temporizador:</strong>
+            evita que un proceso controle la CPU indefinidamente.
+        </li>
+
+        <li>
+            <strong>Permisos:</strong>
+            controlan quién puede leer, escribir o ejecutar archivos.
+        </li>
+    </ul>
+
+    <h3>Mecanismos y políticas</h3>
+
+    <table>
+        <tr>
+            <th>Concepto</th>
+            <th>Significado</th>
+        </tr>
+
+        <tr>
+            <td>Mecanismos</td>
+            <td>Determinan cómo se realizará una acción.</td>
+        </tr>
+
+        <tr>
+            <td>Políticas</td>
+            <td>Deciden qué acciones están permitidas.</td>
+        </tr>
+    </table>
+
+    <div class="destacado">
+        <strong>Funciones principales:</strong>
+        <ul>
+            <li>Controlar el acceso a los recursos.</li>
+            <li>Asegurar que todos los accesos estén controlados.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="tema64">
+    <h2>6.4 Implantación de matrices de acceso</h2>
+
+    <p>
+        La protección de los sistemas de computación se apoya en el
+        núcleo del sistema operativo, que inspecciona y valida cada
+        intento de acceso a un recurso protegido.
+    </p>
+
+    <h3>Matriz de acceso</h3>
+
+    <p>
+        Es una representación abstracta del dominio de protección.
+        Permite especificar los permisos que tiene cada sujeto
+        sobre cada objeto.
+    </p>
+
+    <h3>Elementos básicos</h3>
+
+    <ul>
+        <li><strong>Sujeto:</strong> usuario, proceso o aplicación que accede.</li>
+        <li><strong>Objeto:</strong> archivo, programa o recurso protegido.</li>
+        <li><strong>Derecho de acceso:</strong> permiso para leer, escribir o ejecutar.</li>
+    </ul>
+
+    <h3>Ejemplo de matriz de acceso</h3>
+
+    <table>
+        <tr>
+            <th>Sujeto</th>
+            <th>Archivo A</th>
+            <th>Archivo B</th>
+            <th>Impresora</th>
+        </tr>
+
+        <tr>
+            <td>Usuario 1</td>
+            <td>Leer y escribir</td>
+            <td>Leer</td>
+            <td>Usar</td>
+        </tr>
+
+        <tr>
+            <td>Usuario 2</td>
+            <td>Leer</td>
+            <td>Sin acceso</td>
+            <td>Usar</td>
+        </tr>
+
+        <tr>
+            <td>Proceso 1</td>
+            <td>Leer</td>
+            <td>Escribir</td>
+            <td>Sin acceso</td>
+        </tr>
+    </table>
+
+    <h3>Ventajas de la protección</h3>
+
+    <ol>
+        <li>Permite controlar los permisos de los usuarios.</li>
+        <li>Protege los recursos del sistema.</li>
+        <li>Reduce los accesos no autorizados.</li>
+    </ol>
+</section>
+
+<section id="tema65">
+    <h2>6.5 Protección basada en el lenguaje</h2>
+
+    <p>
+        La protección basada en el lenguaje permite declarar qué
+        accesos se desean sobre un recurso compartido mediante
+        instrucciones y características del lenguaje de programación.
+    </p>
+
+    <h3>Ventajas</h3>
+
+    <ul>
+        <li>Las necesidades de protección se declaran fácilmente.</li>
+        <li>Las políticas pueden expresarse independientemente del sistema operativo.</li>
+        <li>El diseñador no necesita crear todos los mecanismos de protección.</li>
+        <li>Los permisos pueden relacionarse con los tipos de datos.</li>
+    </ul>
+
+    <h3>Comparación</h3>
+
+    <table>
+        <tr>
+            <th>Aspecto</th>
+            <th>Basado en el núcleo</th>
+            <th>Basado en el lenguaje</th>
+        </tr>
+
+        <tr>
+            <td>Seguridad</td>
+            <td>El núcleo valida los accesos.</td>
+            <td>Depende de la seguridad del compilador.</td>
+        </tr>
+
+        <tr>
+            <td>Flexibilidad</td>
+            <td>Puede tener límites en políticas personalizadas.</td>
+            <td>Permite declarar políticas de protección.</td>
+        </tr>
+
+        <tr>
+            <td>Eficiencia</td>
+            <td>Puede aprovechar el hardware.</td>
+            <td>Puede verificar accesos durante la compilación.</td>
+        </tr>
+    </table>
+</section>
+
+<section id="tema66">
+    <h2>6.6 Validación y amenazas al sistema</h2>
+
+    <p>
+        Entre las amenazas a la seguridad en el acceso al sistema
+        se encuentran los intrusos y los programas malignos.
+    </p>
+
+    <h3>Intrusos</h3>
+
+    <p>
+        Son personas que intentan acceder al sistema sin autorización.
+    </p>
+
+    <h3>Técnicas de intrusión</h3>
+
+    <ul>
+        <li>Averiguar contraseñas.</li>
+        <li>Descifrar archivos de contraseñas.</li>
+        <li>Intervenir líneas de comunicación.</li>
+        <li>Utilizar caballos de Troya.</li>
+    </ul>
+
+    <h3>Prevención y detección</h3>
+
+    <table>
+        <tr>
+            <th>Prevención</th>
+            <th>Detección</th>
+        </tr>
+
+        <tr>
+            <td>Utilizar contraseñas seguras.</td>
+            <td>Investigar actividades inusuales.</td>
+        </tr>
+
+        <tr>
+            <td>Realizar inspecciones periódicas.</td>
+            <td>Detectar anomalías estadísticas.</td>
+        </tr>
+
+        <tr>
+            <td>Establecer políticas de acceso.</td>
+            <td>Utilizar registros de auditoría.</td>
+        </tr>
+    </table>
+
+    <h3>Tipos de amenazas</h3>
+
+    <ul>
+        <li><strong>Pasivas:</strong> buscan obtener información.</li>
+        <li><strong>Activas:</strong> modifican o interrumpen comunicaciones.</li>
+        <li><strong>Privación del servicio:</strong> impide el uso normal de un servicio.</li>
+        <li><strong>Suplantación:</strong> una entidad finge ser otra.</li>
+    </ul>
+
+    <h3>Clasificación de programas malignos</h3>
+
+    <table>
+        <tr>
+            <th>Programa</th>
+            <th>Descripción</th>
+        </tr>
+
+        <tr>
+            <td>Trampilla</td>
+            <td>Punto de entrada secreto a un programa.</td>
+        </tr>
+
+        <tr>
+            <td>Bomba lógica</td>
+            <td>Se ejecuta cuando se cumplen ciertas condiciones.</td>
+        </tr>
+
+        <tr>
+            <td>Caballo de Troya</td>
+            <td>Código dañino incrustado en otro programa.</td>
+        </tr>
+
+        <tr>
+            <td>Gusano</td>
+            <td>Programa independiente que se reproduce mediante redes.</td>
+        </tr>
+
+        <tr>
+            <td>Bacteria</td>
+            <td>Se reproduce y consume recursos del sistema.</td>
+        </tr>
+
+        <tr>
+            <td>Virus</td>
+            <td>Código que se inserta en otros programas y se reproduce.</td>
+        </tr>
+    </table>
+</section>
+
+<section id="tema67">
+    <h2>6.7 Cifrado</h2>
+
+    <p>
+        El cifrado es un método que aumenta la seguridad de un mensaje
+        o archivo mediante la codificación de su contenido.
+        Para recuperar la información se necesita una clave adecuada.
+    </p>
+
+    <h3>Métodos y técnicas de cifrado</h3>
+
+    <table>
+        <tr>
+            <th>Método</th>
+            <th>Descripción</th>
+        </tr>
+
+        <tr>
+            <td>Sustitución</td>
+            <td>Reemplaza letras o caracteres por otros diferentes.</td>
+        </tr>
+
+        <tr>
+            <td>Monoalfabética</td>
+            <td>Reemplaza cada letra por otra del alfabeto.</td>
+        </tr>
+
+        <tr>
+            <td>Polialfabética</td>
+            <td>Utiliza varios cifrados monoalfabéticos.</td>
+        </tr>
+
+        <tr>
+            <td>Homófona</td>
+            <td>Una letra puede corresponder a diferentes caracteres.</td>
+        </tr>
+
+        <tr>
+            <td>Poligráfica</td>
+            <td>Reemplaza grupos de caracteres.</td>
+        </tr>
+
+        <tr>
+            <td>César</td>
+            <td>Desplaza los caracteres una cantidad constante de posiciones.</td>
+        </tr>
+
+        <tr>
+            <td>ROT13</td>
+            <td>Utiliza un desplazamiento de 13 posiciones.</td>
+        </tr>
+
+        <tr>
+            <td>Transposición</td>
+            <td>Reordena los datos para ocultar el mensaje.</td>
+        </tr>
+    </table>
+
+    <h3>Cifrado simétrico</h3>
+
+    <div class="tarjeta">
+        <span>🔑</span>
+        <p>
+            Utiliza la misma clave para cifrar y descifrar
+            la información.
+        </p>
+    </div>
+
+    <h3>Cifrado asimétrico</h3>
+
+    <div class="tarjeta">
+        <span>🔐</span>
+        <p>
+            Utiliza dos claves: una pública para cifrar
+            y una privada para descifrar.
+        </p>
+    </div>
+
+    <table>
+        <tr>
+            <th>Tipo</th>
+            <th>Claves</th>
+        </tr>
+
+        <tr>
+            <td>Simétrico</td>
+            <td>Una clave secreta compartida.</td>
+        </tr>
+
+        <tr>
+            <td>Asimétrico</td>
+            <td>Una clave pública y una clave privada.</td>
+        </tr>
+    </table>
+</section>
+<section>
+            <div class="campo">
+            <strong>Bibliografia:
+                <ul>
+    <li>
+        <a href="https://so-sistemas-operativoss.blogspot.com/2017/12/61-concepto-y-objetivos-de-proteccion-y.html?m=1" target="_blank">
+            Concepto y objetivos de protección y seguridad
+        </a>
+    </li>
+
+    <li>
+        <a href="https://teoduloisic.webnode.es/sistemas-operativo3/unidad-6-proteccion-y-seguridad/" target="_blank">
+            Unidad 6: Protección y seguridad
+        </a>
+    </li>
+
+    <li>
+        <a href="https://equipo1tecos.blogspot.com/2011/11/6.html?m=1" target="_blank">
+            Protección y seguridad
+        </a>
+    </li>
+
+    <li>
+        <a href="https://misistema-operativo.blogspot.com/p/63-implantacion-de-matrices-de-acceso.html" target="_blank">
+            Implantación de matrices de acceso
+        </a>
+    </li>
+</ul>
+            </strong>
+            <div class="linea"></div>
+        </div>
+</section>
+<section id="datos">
+    <h2>Datos</h2>
+
+    <div class="datos">
+
+    <div class="campo">
+        <strong>Nombre del alumno:</strong>
+        <p>Isis Mayte Gomez Chavez</p>
+
+        <img src="imegen/1.png"
+             alt="Imagen"
+             width="300">
+    </div>
+
+    <div class="campo">
+        <strong>Nombre del alumno:</strong>
+        <p>Joanna Abigail Aguirre Nuñez</p>
+
+        <img src="imegen/2.png"
+             alt="Imagen"
+             width="300">
+    </div>
+
+</div>
+
+</section>
+
+<footer>
+    <p>Unidad 6 - Protección y seguridad</p>
+    <p>Sistemas Operativos</p>
+</footer>
+<link rel="stylesheet" href="index.css">
+<script src="index.js" defer></script>
+</body>
+</html>
